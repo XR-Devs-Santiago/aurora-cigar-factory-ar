@@ -1,2 +1,3 @@
-# la-aurora-ar
-La Aurora showroom AR
+# aurora-cigar-factory-ar
+
+Aurora Cigar Factory showroom AR
