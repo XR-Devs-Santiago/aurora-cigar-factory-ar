@@ -111,4 +111,6 @@ ehthumbs.db
 sysinfo.txt
 *.stackdump
 
+
 .vscode
+.vsconfig
