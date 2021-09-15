@@ -22,6 +22,7 @@ public class DeteccionImagenes : MonoBehaviour
 		{
 			var objeto_creado = Instantiate(objeto,Vector3.zero,Quaternion.identity);
 			objeto_creado.name = objeto.name;
+			objeto_creado.SetActive(false);
 			objetos_showroom.Add(objeto.name,objeto_creado);
 		}
 	}
@@ -46,7 +47,10 @@ public class DeteccionImagenes : MonoBehaviour
 		}
 		foreach (var imagen_detectada in args.updated)
 		{
-			ActualizarObjeto(imagen_detectada);
+			if(imagen_detectada.trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Tracking)
+				ActualizarObjeto(imagen_detectada);
+			else
+				objetos_showroom[imagen_detectada.referenceImage.name].SetActive(false);
 		}
 		foreach (var imagen_detectada in args.removed)
 		{
@@ -56,19 +60,23 @@ public class DeteccionImagenes : MonoBehaviour
 	
 	private void ActualizarObjeto(ARTrackedImage imagen_detectada)
 	{
-		var nombre_imagen = imagen_detectada.referenceImage.name;
-		var posicion_imagen = imagen_detectada.transform.position;
-		
-		var objeto_a_mostrar = objetos_showroom[nombre_imagen];
-		objeto_a_mostrar.transform.position = posicion_imagen;
-		objeto_a_mostrar.SetActive(true);
-		
-		foreach (var objeto in objetos_showroom.Values)
+		if(objetos_showroom != null)
 		{
-			if(objeto.name != nombre_imagen)
+			var nombre_imagen = imagen_detectada.referenceImage.name;
+			var posicion_imagen = imagen_detectada.transform.position;
+		
+			var objeto_a_mostrar = objetos_showroom[nombre_imagen];
+			objeto_a_mostrar.transform.position = posicion_imagen;
+			objeto_a_mostrar.SetActive(true);
+		 //administrador_imagenes.trackedImagePrefab
+			foreach (var objeto in objetos_showroom.Values)
 			{
-				objeto.SetActive(false);
+				if(objeto.name != nombre_imagen)
+				{
+					objeto.SetActive(false);
+				}
 			}
 		}
+		
 	}
 }
