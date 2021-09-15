@@ -26,12 +26,12 @@ MonoBehaviour:
     m_Name: Cubo
     m_Texture: {fileID: 2800000, guid: 3195b65499552e046a2f457d1a7d6a8b, type: 3}
   - m_SerializedGuid:
-      m_GuidLow: 5539933665165414154
-      m_GuidHigh: 2906326614333483658
+      m_GuidLow: 4978254098242043646
+      m_GuidHigh: 17558561200208650910
     m_SerializedTextureGuid:
       m_GuidLow: 8841852134633883541
       m_GuidHigh: 10234687350655721499
     m_Size: {x: 0.1, y: 0.1}
     m_SpecifySize: 1
-    m_Name: esfera
+    m_Name: Esfera
     m_Texture: {fileID: 2800000, guid: 9961c79591ab7ab41ba00473ebe9088e, type: 3}
