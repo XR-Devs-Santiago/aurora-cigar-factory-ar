@@ -23,5 +23,25 @@ MonoBehaviour:
       m_GuidHigh: 8463280100318495562
     m_Size: {x: 0.1, y: 0.1}
     m_SpecifySize: 1
-    m_Name: s
+    m_Name: Cube
     m_Texture: {fileID: 2800000, guid: f6c4d093295ee4434ac31d2e699c7375, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4894988747604847165
+      m_GuidHigh: 9675040381308545684
+    m_SerializedTextureGuid:
+      m_GuidLow: 8398110098485432187
+      m_GuidHigh: 16832862152688768538
+    m_Size: {x: 0.13333334, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Sphere
+    m_Texture: {fileID: 2800000, guid: b4d84f7b14a3748c1a96218cf1569ae9, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5147122880487551194
+      m_GuidHigh: 17327179525253684873
+    m_SerializedTextureGuid:
+      m_GuidLow: 8420883989195669676
+      m_GuidHigh: 6300827213661550379
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Sphere
+    m_Texture: {fileID: 2800000, guid: 56c840acfd5f74dc2b3769b5f7087157, type: 3}
