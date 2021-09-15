@@ -112,3 +112,4 @@ sysinfo.txt
 *.stackdump
 
 .vscode
+.vsconfig
