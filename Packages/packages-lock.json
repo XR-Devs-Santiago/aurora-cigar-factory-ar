@@ -148,7 +148,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.legacyinputhelpers": {
-      "version": "2.1.8",
+      "version": "2.1.7",
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -158,7 +158,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "4.1.0",
+      "version": "4.0.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
