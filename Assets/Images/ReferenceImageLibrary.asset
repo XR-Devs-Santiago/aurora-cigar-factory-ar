@@ -22,9 +22,9 @@ MonoBehaviour:
       m_GuidLow: 2518801549667281795
       m_GuidHigh: 3558209236299739466
     m_Size: {x: 0.1, y: 0.05494012}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: exp1
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 0b9f2b8394aa22f44af128be724c6131, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4719004278981386795
       m_GuidHigh: 4202569617803544477
@@ -32,9 +32,9 @@ MonoBehaviour:
       m_GuidLow: 5486517461094664968
       m_GuidHigh: 4897451879346941529
     m_Size: {x: 0.1, y: 0.05494012}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: exp2
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: e2868b08068f4c24592e0b55893ef743, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4903778159520862943
       m_GuidHigh: 11688938793875582143
@@ -42,9 +42,9 @@ MonoBehaviour:
       m_GuidLow: 4572420196303699390
       m_GuidHigh: 16257094352890922202
     m_Size: {x: 0.1, y: 0.05494012}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: exp3
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 5c80fdbe7ff13f74da8412202ecd9ce1, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4786109659242262276
       m_GuidHigh: 15052666824675035816
@@ -52,9 +52,9 @@ MonoBehaviour:
       m_GuidLow: 17515854548610116866
       m_GuidHigh: 5580243034446231338
     m_Size: {x: 0.1, y: 0.05494012}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: exp4
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: b350ed02d0e8f3142af783747901714d, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5437307847796381988
       m_GuidHigh: 11010957063289952418
@@ -62,9 +62,9 @@ MonoBehaviour:
       m_GuidLow: 15480006000307762592
       m_GuidHigh: 14850215001073229448
     m_Size: {x: 0.1, y: 0.05494012}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: exp5
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: d14275a00770d6d4889e2519dd8f16ce, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4898770779274157720
       m_GuidHigh: 3946305309372427923
@@ -72,9 +72,9 @@ MonoBehaviour:
       m_GuidLow: 379572414156103332
       m_GuidHigh: 9008862912950624618
     m_Size: {x: 0.1, y: 0.05494012}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: exp6
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 804fdea4831905446ae19c9c16e9057d, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5240791801154671018
       m_GuidHigh: 13010433100542756526
@@ -82,6 +82,6 @@ MonoBehaviour:
       m_GuidLow: 11224212891363941558
       m_GuidHigh: 12970468556541386875
     m_Size: {x: 0.1, y: 0.05494012}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: exp7
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 011b9cb66a289bc47be005836e5c00b4, type: 3}
