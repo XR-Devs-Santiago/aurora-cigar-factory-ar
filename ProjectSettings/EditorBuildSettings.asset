@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Guseppe.unity
+    guid: f52e761e29c9ef64b98923ee15ccf3f5
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: cfb58f64ba617428680f06aeb19a6b3d, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 7d16621fdc952416d87014abeb42c908, type: 2}
