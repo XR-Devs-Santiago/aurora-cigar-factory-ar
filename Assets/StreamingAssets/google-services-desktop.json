@@ -1,0 +1,36 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 1
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "317346154913-5egjg58h8197g8n9ap4m11i18apmmtji.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzxPduCzyIETG_z2IjDge-EnHH017jaF8"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:317346154913:ios:e79199e308f16dcd0263e0", 
+        "android_client_info": {
+          "package_name": "com.teco.auroracigarfactoryar"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "aurora-cigar-factory-project.appspot.com", 
+    "project_id": "aurora-cigar-factory-project", 
+    "project_number": "317346154913"
+  }
+}
