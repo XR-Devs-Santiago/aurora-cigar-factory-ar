@@ -1,15 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Firebase.Auth;
 using Firebase.Analytics;
 using Facebook.Unity;
+using static Firebase.Extensions.TaskExtension;
 
 public class FirebaseInit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+	public GameObject PanelPrincipal;
+	public GameObject PanelLogin;
+	FirebaseAuth auth;
+
+	// Start is called before the first frame update
+	void Start()
     {
 	    Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
             FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);
@@ -17,8 +20,10 @@ public class FirebaseInit : MonoBehaviour
     }
 
     private void Awake()
-    {
-        if (!FB.IsInitialized)
+	{
+		auth = FirebaseAuth.DefaultInstance;
+
+		if (!FB.IsInitialized)
         {
             FB.Init(InitCallBack, OnHideUnity);
         }
@@ -77,10 +82,9 @@ public class FirebaseInit : MonoBehaviour
 
     public void googleSignIn() {
 		string providerId = Firebase.Auth.GoogleAuthProvider.ProviderId;
-		var auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 
 		Firebase.Auth.FederatedOAuthProvider provider = BuildFederatedOAuthProvider(providerId);
-		auth.SignInWithProviderAsync(provider).ContinueWith(task => {
+		auth.SignInWithProviderAsync(provider).ContinueWithOnMainThread(task => {
 			if (task.IsCanceled) {
 			    Debug.LogError("SignInWithCredentialAsync was canceled.");
 			    return;
@@ -93,15 +97,16 @@ public class FirebaseInit : MonoBehaviour
 			Firebase.Auth.FirebaseUser newUser = task.Result.User;
 			Debug.LogFormat("User signed in successfully: {0} ({1})",
 				newUser.DisplayName, newUser.UserId);
+
+			activarPanelPrincipal();
 		});
 	}
 	
 	public void facebookFirebaseSignIn() {
-		var auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 		var accessToken = Facebook.Unity.AccessToken.CurrentAccessToken.TokenString;
 		
 		Firebase.Auth.Credential credential = Firebase.Auth.FacebookAuthProvider.GetCredential(accessToken);
-		auth.SignInWithCredentialAsync(credential).ContinueWith(task => {
+		auth.SignInWithCredentialAsync(credential).ContinueWithOnMainThread(task => {
 			if (task.IsCanceled) {
 			    Debug.LogError("SignInWithCredentialAsync was canceled.");
 			    return;
@@ -114,6 +119,8 @@ public class FirebaseInit : MonoBehaviour
 			Firebase.Auth.FirebaseUser newUser = task.Result;
 			Debug.LogFormat("User signed in successfully: {0} ({1})",
 				newUser.DisplayName, newUser.UserId);
+				
+			activarPanelPrincipal();
 		});
 	}
 	
@@ -122,5 +129,10 @@ public class FirebaseInit : MonoBehaviour
 		data.ProviderId = providerId;
 
 		return  new Firebase.Auth.FederatedOAuthProvider(data);
+	}
+	
+	void activarPanelPrincipal() {
+		PanelPrincipal.SetActive(true);
+		PanelLogin.SetActive(false);
 	}
 }
