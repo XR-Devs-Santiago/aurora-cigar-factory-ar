@@ -522,7 +522,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 985370680}
         m_TargetAssemblyTypeName: FirebaseInit, Assembly-CSharp
-        m_MethodName: Facebook_Login
+        m_MethodName: facebookSignIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -798,7 +798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e27607f559da47e783f7d183e386ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: {fileID: 0}
 --- !u!4 &985370681
 Transform:
   m_ObjectHideFlags: 0

@@ -8,8 +8,6 @@ using Facebook.Unity;
 
 public class FirebaseInit : MonoBehaviour
 {
-    public Text debug;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +36,7 @@ public class FirebaseInit : MonoBehaviour
         }
         else
         {
-            debug.text = ("Failed to initialize");
+	        Debug.Log("Fallo de inicializacion");
         }
     }
 
@@ -54,12 +52,13 @@ public class FirebaseInit : MonoBehaviour
         }
     }
 
-    public void Facebook_Login()
+    public void facebookSignIn()
     {
         var permission = new List<string>()
         {
             "public_profile", "email"
         };
+
         FB.LogInWithReadPermissions(permission, AuthCallBack);
     }
 
@@ -67,11 +66,12 @@ public class FirebaseInit : MonoBehaviour
     {
         if (FB.IsLoggedIn)
         {
-            facebookSignIn();
+	        facebookFirebaseSignIn();
         }
         else
         {
-            debug.text = ("User Cancelled login");
+	        Debug.Log("Usuario Cancelo login");
+
         }
     }
 
@@ -96,7 +96,7 @@ public class FirebaseInit : MonoBehaviour
 		});
 	}
 	
-	public void facebookSignIn() {
+	public void facebookFirebaseSignIn() {
 		var auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
 		var accessToken = Facebook.Unity.AccessToken.CurrentAccessToken.TokenString;
 		
