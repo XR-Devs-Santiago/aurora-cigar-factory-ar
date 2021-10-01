@@ -1,0 +1,2 @@
+aa3fc6a37a724a45b7630b2221b5792f|C:\Users\AVR 12\Documents\GitHub\aurora-cigar-factory-ar\Assets\Images\Cubo.png|0.1
+f7597efe4fb945169ea264e1618aacf3|C:\Users\AVR 12\Documents\GitHub\aurora-cigar-factory-ar\Assets\Images\Esfera.png|0.1
