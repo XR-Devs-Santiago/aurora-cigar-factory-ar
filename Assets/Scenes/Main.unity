@@ -11921,10 +11921,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 755678626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Script: {fileID: 11500000, guid: fde66588aaab1554ebe5525a38226ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RaycastPrefab: {fileID: 0}
+  objetos_a_agregar:
+  - {fileID: 5145243743132326839, guid: eda8943c920dbc842b62ce4f81fe82ba, type: 3}
+  - {fileID: 4917160173020351275, guid: b66d5e3877955db41bf11c1ba539f7d3, type: 3}
 --- !u!114 &755678628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11934,11 +11936,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 755678626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 0}
-  m_DetectionMode: -1
+  m_SerializedLibrary: {fileID: 11400000, guid: d473884215a03ed4b99655caba1c7b7d, type: 2}
+  m_MaxNumberOfMovingImages: 7
+  m_TrackedImagePrefab: {fileID: 0}
 --- !u!114 &755678629
 MonoBehaviour:
   m_ObjectHideFlags: 0
