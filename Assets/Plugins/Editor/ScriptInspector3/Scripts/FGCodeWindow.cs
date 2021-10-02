@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -1315,7 +1315,7 @@ public class FGCodeWindow : EditorWindow
 				}
 				else if (isOSX && !Event.current.alt && EditorGUI.actionKey)
 				{
-					if (Event.current.shift && Event.current.keyCode == KeyCode.W ||
+					if (/*Event.current.shift &&*/ Event.current.keyCode == KeyCode.W ||
 						!Event.current.shift && Event.current.keyCode == KeyCode.F4)
 					{
 						Event.current.Use();

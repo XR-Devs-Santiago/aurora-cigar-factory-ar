@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -94,10 +94,16 @@ public class CsGrammar : FGGrammar
 	public override Parser GetParser { get { return parser; } }
 
 	readonly Id EOF, IDENTIFIER, NAME, LITERAL;
+	readonly Id INTERP_STR_WHOLE, INTERP_STR_START, INTERP_STR_MID, INTERP_STR_END, INTERP_STR_FORMAT;
 
 	public int tokenIdentifier,
 		tokenName,
 		tokenLiteral,
+		tokenInterpStrWhole,
+		tokenInterpStrStart,
+		tokenInterpStrMid,
+		tokenInterpStrEnd,
+		tokenInterpStrFormat,
 		tokenAttribute,
 		tokenStatement,
 		tokenClassBody,
@@ -115,6 +121,11 @@ public class CsGrammar : FGGrammar
 		tokenIdentifier = TokenToId("IDENTIFIER");
 		tokenName = TokenToId("NAME");
 		tokenLiteral = TokenToId("LITERAL");
+		tokenInterpStrWhole = TokenToId("INTERP_STR_WHOLE");
+		tokenInterpStrStart = TokenToId("INTERP_STR_START");
+		tokenInterpStrMid = TokenToId("INTERP_STR_MID");
+		tokenInterpStrEnd = TokenToId("INTERP_STR_END");
+		tokenInterpStrFormat = TokenToId("INTERP_STR_FORMAT");
 		tokenAttribute = TokenToId(".ATTRIBUTE");
 		tokenStatement = TokenToId(".STATEMENT");
 		tokenClassBody = TokenToId(".CLASSBODY");
@@ -136,6 +147,12 @@ public class CsGrammar : FGGrammar
 		IDENTIFIER = new Id("IDENTIFIER");
 		LITERAL = new Id("LITERAL");
 		NAME = new NameId();
+		
+		INTERP_STR_WHOLE = new Id("INTERP_STR_WHOLE");
+		INTERP_STR_START = new Id("INTERP_STR_START");
+		INTERP_STR_MID = new Id("INTERP_STR_MID");
+		INTERP_STR_END = new Id("INTERP_STR_END");
+		INTERP_STR_FORMAT = new Id("INTERP_STR_FORMAT");
 
 	//	NAME = new Id("IDENTIFIER");
 	//	tokenName = TokenToId("NAME");
@@ -646,6 +663,8 @@ public class CsGrammar : FGGrammar
 		var localConstantDeclaration = new Id("localConstantDeclaration");
 		//var unmanagedType = new Id("unmanagedType");
 		var resourceAcquisition = new Id("resourceAcquisition");
+		var outVariableDeclaration = new Id("outVariableDeclaration");
+		var outVariableDeclarator = new Id("outVariableDeclarator");
 
 		var VAR = new Id("VAR");
 		
@@ -703,11 +722,11 @@ public class CsGrammar : FGGrammar
 				) { semantics = SemanticFlags.LocalVariableDeclarator });
 		}
 		else
-        {
+		{
 			parser.Add(new Rule("localVariableDeclarator",
 				NAME - new Opt("=" - new Opt("ref") - localVariableInitializer)
 				) { semantics = SemanticFlags.LocalVariableDeclarator });
-        }
+		}
 
 		if (!CsParser.isCSharp4)
 		{
@@ -837,7 +856,7 @@ public class CsGrammar : FGGrammar
 		{
 			parser.Add(new Rule("switchSection",
 				switchLabel - new Many(switchLabel) - statement - statementList
-			));
+				));
 
 			parser.Add(new Rule("switchLabel",
 				"case" - constantExpression - ":"
@@ -1768,6 +1787,9 @@ public class CsGrammar : FGGrammar
 			new If("." - IDENTIFIER, accessIdentifier) | "."
 			));
 
+		var interpolatedStringLiteral = new Id("interpolatedStringLiteral");
+		var stringInterpolation = new Id("stringInterpolation");
+		
 		if (CsParser.isCSharp4)
 		{
 			parser.Add(new Rule("primaryExpressionStart",
@@ -1787,9 +1809,21 @@ public class CsGrammar : FGGrammar
 		}
 		else
 		{
+			parser.Add(new Rule("interpolatedStringLiteral",
+				INTERP_STR_WHOLE
+				| INTERP_STR_START - stringInterpolation
+				- new Many(new Opt(INTERP_STR_MID) - stringInterpolation) - INTERP_STR_END
+				));
+				
+			parser.Add(new Rule("stringInterpolation",
+				"{" - expression - new Opt("," - constantExpression)
+				- new Opt(":" - INTERP_STR_FORMAT) - "}"
+				));
+		
 			parser.Add(new Rule("primaryExpressionStart",
 				predefinedType
 				| LITERAL | "true" | "false"
+				| interpolatedStringLiteral
 				| new If("nameof", IDENTIFIER - "(", nameofExpression)
 				| new If(IDENTIFIER - typeArgumentList /*- (new Lit("(") | ")" | ":" | ";" | "," | "." | "?" | "==" | "!="*/, IDENTIFIER - typeArgumentList)
 				| new If(IDENTIFIER - "::", globalNamespace - "::") - IDENTIFIER
@@ -1882,11 +1916,22 @@ public class CsGrammar : FGGrammar
 				| ".EXPECTEDTYPE"
 				));
 		else
+		{
+			parser.Add(new Rule("outVariableDeclaration",
+				localVariableType - outVariableDeclarator
+				));
+
+			parser.Add(new Rule("outVariableDeclarator",
+				NAME
+				) { semantics = SemanticFlags.OutVariableDeclarator });
+
 			parser.Add(new Rule("argumentValue",
 				expression
+				| new If("out" - localVariableType - IDENTIFIER, "out" - outVariableDeclaration)
 				| new Seq( new Lit("out") | "ref" | "in", variableReference )
 				| ".EXPECTEDTYPE"
 				));
+		}
 
 		parser.Add(new Rule("variableReference",
 			expression
@@ -2333,12 +2378,12 @@ public class CsGrammar : FGGrammar
 			}
 			else
 			{
-                if (scanner.CurrentParseTreeNode == node && scanner.CurrentGrammarNode == rule && scanner.CurrentTokenIndex() == tokenIndex && scanner.CurrentLine() == scannerLine)
-                {
+				if (scanner.CurrentParseTreeNode == node && scanner.CurrentGrammarNode == rule && scanner.CurrentTokenIndex() == tokenIndex && scanner.CurrentLine() == scannerLine)
+				{
 					parser.tryToRecover = false;
 					//Debug.LogError("Cannot continue parsing - stuck at line " + scannerLine + ", token index " + tokenIndex);
-                    //return false;
-                }
+					//return false;
+				}
 				numErrors = 0;
 			}
 		}
@@ -2535,6 +2580,7 @@ public class CsGrammar : FGGrammar
 					node.scope = new TypeBaseScope(node) { parentScope = enclosingScope, definition = declaration != null ? declaration.definition as TypeDefinitionBase : null };
 					break;
 				case SemanticFlags.TypeParameterConstraintsScope:
+					node.scope = new LocalScope(node) { parentScope = enclosingScope };
 					break;
 				case SemanticFlags.ClassBodyScope:
 				case SemanticFlags.StructBodyScope:
@@ -2589,6 +2635,7 @@ public class CsGrammar : FGGrammar
 					//    Debug.LogWarning("Declaration not found: " + node.parent);
 					break;
 				case SemanticFlags.ConstructorInitializerScope:
+					node.scope = new BaseScope(node) { parentScope = enclosingScope };
 					break;
 				case SemanticFlags.SwitchBlockScope:
 				case SemanticFlags.ForStatementScope:
@@ -2599,14 +2646,16 @@ public class CsGrammar : FGGrammar
 					node.scope = new SwitchSectionScope(node) { parentScope = enclosingScope };
 					break;
 				case SemanticFlags.EmbeddedStatementScope:
+					node.scope = new LocalScope(node) { parentScope = enclosingScope };
 					break;
 				case SemanticFlags.LocalVariableInitializerScope:
+					node.scope = new BaseScope(node) { parentScope = enclosingScope };
 					break;
 				case SemanticFlags.SpecificCatchScope:
 					node.scope = new LocalScope(node) { parentScope = enclosingScope };
 					break;
 				case SemanticFlags.ArgumentListScope:
-					node.scope = new LocalScope(node) { parentScope = enclosingScope };
+					node.scope = new BaseScope(node) { parentScope = enclosingScope };
 					break;
 				case SemanticFlags.AttributeArgumentsScope:
 					node.scope = new AttributeArgumentsScope(node) { parentScope = enclosingScope };
@@ -2619,6 +2668,7 @@ public class CsGrammar : FGGrammar
 					node.scope = new SymbolDeclarationScope(node) { parentScope = enclosingScope, declaration = declaration };
 					break;
 				case SemanticFlags.MemberDeclarationScope:
+					node.scope = new LocalScope(node) { parentScope = enclosingScope };
 					break;
 				case SemanticFlags.MethodDeclarationScope:
 					declaration = GetNodeDeclaration(node);
@@ -2636,7 +2686,9 @@ public class CsGrammar : FGGrammar
 			}
 			//	Debug.Log("  in " + scopeSemantics);
 			if (node.scope == null)
+			{
 				node.scope = new LocalScope(node) { parentScope = enclosingScope };
+			}
 		}
 		return node.scope;
 	}
@@ -2746,6 +2798,11 @@ public class CsGrammar : FGGrammar
 					break;
 				case SemanticFlags.LocalVariableDeclarator:
 					node.declaration = new SymbolDeclaration { parseTreeNode = node, kind = SymbolKind.Variable };
+					break;
+				case SemanticFlags.OutVariableDeclarator:
+					enclosingScopeNode = null;
+					enclosingScope = enclosingScope.parentScope;
+					node.declaration = new SymbolDeclaration { parseTreeNode = node, kind = SymbolKind.OutVariable };
 					break;
 				case SemanticFlags.CaseVariableDeclaration:
 					node.declaration = new SymbolDeclaration { parseTreeNode = node, kind = SymbolKind.CaseVariable };
@@ -3409,6 +3466,21 @@ public class CsGrammar : FGGrammar
 						case SyntaxToken.Kind.StringLiteral:
 						case SyntaxToken.Kind.VerbatimStringBegin:
 							token.tokenId = grammar.tokenLiteral;
+							break;
+						case SyntaxToken.Kind.InterpolatedStringWholeLiteral:
+							token.tokenId = grammar.tokenInterpStrWhole;
+							break;
+						case SyntaxToken.Kind.InterpolatedStringStartLiteral:
+							token.tokenId = grammar.tokenInterpStrStart;
+							break;
+						case SyntaxToken.Kind.InterpolatedStringMidLiteral:
+							token.tokenId = grammar.tokenInterpStrMid;
+							break;
+						case SyntaxToken.Kind.InterpolatedStringEndLiteral:
+							token.tokenId = grammar.tokenInterpStrEnd;
+							break;
+						case SyntaxToken.Kind.InterpolatedStringFormatLiteral:
+							token.tokenId = grammar.tokenInterpStrFormat;
 							break;
 						default:
 							throw new ArgumentOutOfRangeException();

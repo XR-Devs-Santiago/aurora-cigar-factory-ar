@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -277,6 +277,12 @@ public static class FGFindInFiles
 			
 			case SyntaxToken.Kind.StringLiteral:
 			case SyntaxToken.Kind.VerbatimStringLiteral:
+			case SyntaxToken.Kind.VerbatimStringBegin:
+			case SyntaxToken.Kind.InterpolatedStringWholeLiteral:
+			case SyntaxToken.Kind.InterpolatedStringStartLiteral:
+			case SyntaxToken.Kind.InterpolatedStringMidLiteral:
+			case SyntaxToken.Kind.InterpolatedStringEndLiteral:
+			case SyntaxToken.Kind.InterpolatedStringFormatLiteral:
 				if (isVarResult)
 					return FindResultsWindow.ResultType.RemoveResult;
 				return FindResultsWindow.ResultType.String;
@@ -449,6 +455,7 @@ public static class FGFindInFiles
 			symbol.kind == SymbolKind.LambdaExpression ||
 			symbol.kind == SymbolKind.LocalConstant ||
 			symbol.kind == SymbolKind.Parameter ||
+			symbol.kind == SymbolKind.OutVariable ||
 			symbol.kind == SymbolKind.Variable)
 		{
 			// Local symbols cannot appear in any other file

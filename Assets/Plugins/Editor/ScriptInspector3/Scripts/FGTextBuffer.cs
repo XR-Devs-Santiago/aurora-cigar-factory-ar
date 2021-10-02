@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -1884,50 +1884,50 @@ public class FGTextBuffer : ScriptableObject
 		return new TextPosition(lines.Count, 0);
 	}
 	
-	private static Dictionary<string, string>[] expandedCache;
-	private static int cashedTabSize = 0;
-	public static string ExpandTabs(string s, int startAtColumn)
-	{
-		// Replacing tabs with spaces for proper alignment
-		int tabPos = s.IndexOf('\t', 0);
-		if (tabPos == -1)
-			return s;
+	//private static Dictionary<string, string>[] expandedCache;
+	//private static int cashedTabSize = 0;
+	//public static string ExpandTabs(string s, int startAtColumn)
+	//{
+	//	// Replacing tabs with spaces for proper alignment
+	//	int tabPos = s.IndexOf('\t', 0);
+	//	if (tabPos == -1)
+	//		return s;
 		
-		if (tabSize != cashedTabSize)
-		{
-			cashedTabSize = tabSize;
-			expandedCache = new [] {
-				new Dictionary<string, string>(),
-				new Dictionary<string, string>(),
-				new Dictionary<string, string>(),
-				new Dictionary<string, string>(),
-				new Dictionary<string, string>(),
-				new Dictionary<string, string>(),
-				new Dictionary<string, string>(),
-				new Dictionary<string, string>(),
-			};
-		}
+	//	if (tabSize != cashedTabSize)
+	//	{
+	//		cashedTabSize = tabSize;
+	//		expandedCache = new [] {
+	//			new Dictionary<string, string>(),
+	//			new Dictionary<string, string>(),
+	//			new Dictionary<string, string>(),
+	//			new Dictionary<string, string>(),
+	//			new Dictionary<string, string>(),
+	//			new Dictionary<string, string>(),
+	//			new Dictionary<string, string>(),
+	//			new Dictionary<string, string>(),
+	//		};
+	//	}
 
-		string cached;
-		if (expandedCache[startAtColumn % tabSize].TryGetValue(s, out cached))
-			return cached;
+	//	string cached;
+	//	if (expandedCache[startAtColumn % tabSize].TryGetValue(s, out cached))
+	//		return cached;
 
-		int startFrom = 0;
-		var sb = new StringBuilder();
-		while ((tabPos = s.IndexOf('\t', startFrom)) != -1)
-		{
-			sb.Append(s, startFrom, tabPos - startFrom);
-			sb.Append(' ', tabSize - ((sb.Length + startAtColumn) % tabSize));
-			startFrom = tabPos + 1;
-		}
-		if (startFrom == 0)
-			return s;
-		sb.Append(s.Substring(startFrom));
+	//	int startFrom = 0;
+	//	var sb = new StringBuilder();
+	//	while ((tabPos = s.IndexOf('\t', startFrom)) != -1)
+	//	{
+	//		sb.Append(s, startFrom, tabPos - startFrom);
+	//		sb.Append(' ', tabSize - ((sb.Length + startAtColumn) % tabSize));
+	//		startFrom = tabPos + 1;
+	//	}
+	//	if (startFrom == 0)
+	//		return s;
+	//	sb.Append(s.Substring(startFrom));
 		
-		cached = sb.ToString();
-		expandedCache[startAtColumn % tabSize][s] = cached;
-		return cached;
-	}
+	//	cached = sb.ToString();
+	//	expandedCache[startAtColumn % tabSize][s] = cached;
+	//	return cached;
+	//}
 
 	private void Parse(int parseToLine)
 	{

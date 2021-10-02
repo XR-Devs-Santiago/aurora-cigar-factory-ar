@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -328,10 +328,10 @@ public class FGListPopup : FGPopupWindow
 			SymbolKind.EnumMember, SymbolKind.Property, SymbolKind.Event, SymbolKind.Indexer,
 			SymbolKind.Method, SymbolKind.Constructor, SymbolKind.Destructor, SymbolKind.Operator,
 			SymbolKind.Accessor, SymbolKind.Parameter, SymbolKind.CatchParameter, SymbolKind.Variable, SymbolKind.CaseVariable,
-			SymbolKind.ForEachVariable, SymbolKind.FromClauseVariable, SymbolKind.TypeParameter,
+			SymbolKind.OutVariable, SymbolKind.ForEachVariable, SymbolKind.FromClauseVariable, SymbolKind.TypeParameter,
 			SymbolKind.Label };
 		var oneForAll = new HashSet<SymbolKind> { SymbolKind.Namespace, SymbolKind.EnumMember, SymbolKind.Parameter,
-			SymbolKind.CatchParameter, SymbolKind.Variable, SymbolKind.CaseVariable, SymbolKind.ForEachVariable, SymbolKind.FromClauseVariable,
+			SymbolKind.CatchParameter, SymbolKind.Variable, SymbolKind.CaseVariable, SymbolKind.OutVariable, SymbolKind.ForEachVariable, SymbolKind.FromClauseVariable,
 			SymbolKind.TypeParameter, SymbolKind.Label, SymbolKind.LocalConstant, SymbolKind.Constructor, SymbolKind.Destructor };
 		symbolIcons = new Texture2D[System.Enum.GetNames(typeof(SymbolKind)).Length, 3];
 		for (var i = 0; i < kinds.Length; i++)
@@ -342,6 +342,8 @@ public class FGListPopup : FGPopupWindow
 			else if (kind == "EnumMember")
 				kind = "EnumItem";
 			else if (kind == "CaseVariable")
+				kind = "Variable";
+			else if (kind == "OutVariable")
 				kind = "Variable";
 			var index = (int) kinds[i];
 			symbolIcons[index, 0] = FGTextEditor.LoadEditorResource<Texture2D>("Symbol Icons/VSObject_" + kind + ".png");
@@ -439,6 +441,11 @@ public class FGListPopup : FGPopupWindow
 			if (onToken != null && (
 				onToken.tokenKind == SyntaxToken.Kind.StringLiteral ||
 				onToken.tokenKind == SyntaxToken.Kind.VerbatimStringLiteral ||
+				onToken.tokenKind == SyntaxToken.Kind.InterpolatedStringWholeLiteral ||
+				onToken.tokenKind == SyntaxToken.Kind.InterpolatedStringStartLiteral ||
+				onToken.tokenKind == SyntaxToken.Kind.InterpolatedStringMidLiteral ||
+				onToken.tokenKind == SyntaxToken.Kind.InterpolatedStringEndLiteral ||
+				onToken.tokenKind == SyntaxToken.Kind.InterpolatedStringFormatLiteral ||
 				onToken.tokenKind == SyntaxToken.Kind.CharLiteral ||
 				onToken.tokenKind == SyntaxToken.Kind.CharLiteral ||
 				onToken.tokenKind >= SyntaxToken.Kind.Preprocessor &&
@@ -496,7 +503,7 @@ public class FGListPopup : FGPopupWindow
 			var kind = symbol.kind;
 			if (kind == SymbolKind.Variable || kind == SymbolKind.Parameter || kind == SymbolKind.LocalConstant ||
 				kind == SymbolKind.Label ||
-				kind == SymbolKind.CatchParameter || kind == SymbolKind.FromClauseVariable || kind == SymbolKind.ForEachVariable || kind == SymbolKind.CaseVariable)
+				kind == SymbolKind.CatchParameter || kind == SymbolKind.FromClauseVariable || kind == SymbolKind.ForEachVariable || kind == SymbolKind.CaseVariable || kind == SymbolKind.OutVariable)
 			{
 				var nameOf = NameOf(symbol);
 				var recentIndex = recentCompletions.IndexOf(nameOf);
@@ -775,7 +782,8 @@ public class FGListPopup : FGPopupWindow
 					itemContent.text += "<>";
 				rcItem.x += offset.x;
 				rcItem.y += offset.y;
-				listItemStyle.Draw(rcItem, itemContent, false, focus, focus, on);
+				if (Event.current.type == EventType.Repaint)
+					listItemStyle.Draw(rcItem, itemContent, false, focus, focus, on);
 			}
 			
 			EditorGUIUtility.SetIconSize(Vector2.zero);
