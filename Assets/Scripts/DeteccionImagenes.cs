@@ -64,6 +64,7 @@ public class DeteccionImagenes : MonoBehaviour
 		{
 			var nombre_imagen = imagen_detectada.referenceImage.name;
 			var posicion_imagen = imagen_detectada.transform.position;
+			//var posicion_central = new Vector3(Screen.width/2,Screen.height/2,Camera.main.nearClipPlane);
 		
 			var objeto_a_mostrar = objetos_showroom[nombre_imagen];
 			objeto_a_mostrar.transform.position = posicion_imagen;

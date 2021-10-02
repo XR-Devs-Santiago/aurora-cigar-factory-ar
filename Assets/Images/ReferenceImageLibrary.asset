@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 4850977133869434805
+  m_GuidHigh: 3075207603012563854
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5520991108429320467
+      m_GuidHigh: 3645874914140573077
+    m_SerializedTextureGuid:
+      m_GuidLow: 2518801549667281795
+      m_GuidHigh: 3558209236299739466
+    m_Size: {x: 0.1, y: 0.05494012}
+    m_SpecifySize: 0
+    m_Name: exp1
+    m_Texture: {fileID: 2800000, guid: 0b9f2b8394aa22f44af128be724c6131, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4719004278981386795
+      m_GuidHigh: 4202569617803544477
+    m_SerializedTextureGuid:
+      m_GuidLow: 5486517461094664968
+      m_GuidHigh: 4897451879346941529
+    m_Size: {x: 0.1, y: 0.05494012}
+    m_SpecifySize: 0
+    m_Name: exp2
+    m_Texture: {fileID: 2800000, guid: e2868b08068f4c24592e0b55893ef743, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4903778159520862943
+      m_GuidHigh: 11688938793875582143
+    m_SerializedTextureGuid:
+      m_GuidLow: 1190250027814835925
+      m_GuidHigh: 1952099170912047384
+    m_Size: {x: 0.1, y: 0.05494012}
+    m_SpecifySize: 0
+    m_Name: exp3
+    m_Texture: {fileID: 2800000, guid: 15cd56d59e18108418118c70da3f171b, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4786109659242262276
+      m_GuidHigh: 15052666824675035816
+    m_SerializedTextureGuid:
+      m_GuidLow: 5874095884962251101
+      m_GuidHigh: 14217798197125754458
+    m_Size: {x: 0.1, y: 0.05494012}
+    m_SpecifySize: 0
+    m_Name: exp4
+    m_Texture: {fileID: 2800000, guid: c7c2415dfb1551845aaede9321c44fc5, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5437307847796381988
+      m_GuidHigh: 11010957063289952418
+    m_SerializedTextureGuid:
+      m_GuidLow: 6882681281923041757
+      m_GuidHigh: 6346937842229361131
+    m_Size: {x: 0.1, y: 0.05494012}
+    m_SpecifySize: 0
+    m_Name: exp5
+    m_Texture: {fileID: 2800000, guid: ef40c9dd32285f84ebb9900957da1458, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4898770779274157720
+      m_GuidHigh: 3946305309372427923
+    m_SerializedTextureGuid:
+      m_GuidLow: 7522271224450572628
+      m_GuidHigh: 997736052217367176
+    m_Size: {x: 0.1, y: 0.05494012}
+    m_SpecifySize: 0
+    m_Name: exp6
+    m_Texture: {fileID: 2800000, guid: ed84e15479d26864884a043ca7abd80d, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5240791801154671018
+      m_GuidHigh: 13010433100542756526
+    m_SerializedTextureGuid:
+      m_GuidLow: 681193826813857253
+      m_GuidHigh: 3102304493587885560
+    m_Size: {x: 0.1, y: 0.05494012}
+    m_SpecifySize: 0
+    m_Name: exp7
+    m_Texture: {fileID: 2800000, guid: 266dcde5162d0974f86d670d80990d2b, type: 3}
