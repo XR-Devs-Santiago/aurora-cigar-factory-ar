@@ -11,9 +11,8 @@ public class BarraProgreso : MonoBehaviour
 	public TMP_Text ValorBarraProgreso, NumEstaciones;
 	public	bool[] advarr =new bool[7];
 	private Color ColorBarra = Color.green;
+	public int estacionSeleccionada;
 	
-	
-
 	private void Awake()
 	{
 		Barra = GetComponent<Slider>();
@@ -59,5 +58,7 @@ public class BarraProgreso : MonoBehaviour
 		}
 	}
 	
-	
+	public void SeleccionarEstacion(int seleccion) {
+		estacionSeleccionada = seleccion;
+	}	
 }
