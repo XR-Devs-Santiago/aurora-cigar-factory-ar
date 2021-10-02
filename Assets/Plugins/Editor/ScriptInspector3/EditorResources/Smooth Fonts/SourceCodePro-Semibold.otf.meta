@@ -1,22 +1,16 @@
 fileFormatVersion: 2
 guid: 62ab3d81a332e044aa16ef6cd2a25951
 TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 2
   fontSize: 12
+  fontColor: {r: 1, g: 1, b: 1, a: 1}
   forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
+  characterSpacing: 1
+  characterPadding: 0
   includeFontData: 1
-  fontName: 
+  use2xBehaviour: 0
   fontNames:
   - Consolas
-  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
   userData: 
-  assetBundleName: 
-  assetBundleVariant: 

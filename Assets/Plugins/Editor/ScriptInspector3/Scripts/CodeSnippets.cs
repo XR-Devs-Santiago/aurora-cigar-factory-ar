@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -240,6 +240,14 @@ class CodeSnippets : AssetPostprocessor
 				expanded = expanded.Remove(index, end - index + 2);
 				continue;
 				
+			case "ValidAsTypeMember":
+				if (expected != null && !(
+						expected.Matches(CsGrammar.Instance.tokenClassBody)
+						|| expected.Matches(CsGrammar.Instance.tokenStructBody)))
+					return false;
+				expanded = expanded.Remove(index, end - index + 2);
+				continue;
+				
 			case "ValidAsStructMember":
 				if (expected != null && !expected.Matches(CsGrammar.Instance.tokenStructBody))
 					return false;
@@ -311,8 +319,10 @@ class CodeSnippets : AssetPostprocessor
 		var managerScript = MonoScript.FromScriptableObject(FGTextBufferManager.Instance());
 		if (!managerScript)
 			return null;
-		var path = System.IO.Path.GetDirectoryName(System.IO.Path.GetDirectoryName(AssetDatabase.GetAssetPath(managerScript)));
-		return path + "/CodeSnippets/";
+		var path = AssetDatabase.GetAssetPath(managerScript);
+		path = path.Substring(0, path.LastIndexOf('/', path.LastIndexOf('/') - 1));
+		path = path + "/CodeSnippets/";
+		return path;
 	}
 	
 	private static void Reload()

@@ -1,7 +1,7 @@
 -------------------------------------
 SCRIPT INSPECTOR 3
-version 3.0.28, March 2021
-Copyright © 2012-2020, Flipbook Games
+version 3.0.29, May 2021
+Copyright © 2012-2021, Flipbook Games
 -------------------------------------
 
 
@@ -23,6 +23,19 @@ Thank you @inventor2010 for being awesome!!! :)
 
 Script Inspector 3 - Version History
 =====================================
+
+New in version 3.0.29:
+- C# 5.0-7.3 support:
+  * interpolated strings with syntax highlighting and autocomplete
+  * inline out variable declarations
+- Full support for Chinese, Japanese, and Korean characters
+- Workaround for Unity's buggy positioning of the composition popup
+- New code snippets: "prop" and "propg" - thanks @RGAMESR
+- Updated Visual Studio Dark color theme to match VS 2019
+- Improved resolving of method overloads
+- Reduced recursion depth for C# semantic analysis
+- Workaround for GUIStyle.Draw exception on Linux
+- Fixed semantic analysis of void delegate types
 
 New in version 3.0.28:
 - C# 5.0-7.3 support:

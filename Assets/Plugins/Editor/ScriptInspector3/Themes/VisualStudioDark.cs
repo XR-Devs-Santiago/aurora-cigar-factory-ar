@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -20,7 +20,7 @@ namespace ScriptInspector.Themes
 	[InitializeOnLoad]
 	public class VisualStudioDark
 	{
-		private static string _themeName = "Visual Studio Dark"; // Visual Studio Dark (courtesy of Killcycle)
+		private static string _themeName = "Visual Studio Dark";
 		
 		static VisualStudioDark()
 		{
@@ -30,35 +30,36 @@ namespace ScriptInspector.Themes
 		public static Theme _colourTheme = new Theme
 		{
 			background = new Color32(30, 30, 30, 255),
-			text = new Color32(218, 218, 218, 255),
+			text = new Color32(220, 220, 220, 255),
 			hyperlinks = new Color32(86, 156, 214, 255),
 			
 			keywords = new Color32(86, 156, 214, 255),
+			controlKeywords = new Color32(216, 160, 223, 255),
 			constants = new Color32(181, 206, 168, 255),
 			strings = new Color32(214, 157, 133, 255),
 			builtInLiterals = new Color32(86, 156, 214, 255),
 			operators = new Color32(180, 180, 180, 255),
 			
 			referenceTypes = new Color32(78, 201, 176, 255),
-			valueTypes = new Color32(78, 201, 176, 255),
+			valueTypes = new Color32(134, 198, 145, 255),
 			interfaceTypes = new Color32(184, 215, 163, 255),
 			enumTypes = new Color32(184, 215, 163, 255),
 			delegateTypes = new Color32(78, 201, 176, 255),
 			builtInTypes = new Color32(86, 156, 214, 255),
 			
 			namespaces = new Color32(200, 200, 200, 255),
-			methods = new Color32(200, 200, 200, 255),
-			fields = new Color32(218, 218, 218, 255),
-			properties = new Color32(200, 200, 200, 255),
-			events = new Color32(200, 200, 200, 255),
+			methods = new Color32(220, 220, 170, 255),
+			fields = new Color32(220, 220, 220, 255),
+			properties = new Color32(220, 220, 220, 255),
+			events = new Color32(220, 220, 220, 255),
 			
-			parameters = new Color32(127, 127, 127, 255),
-			variables = new Color32(200, 200, 200, 255),
+			parameters = new Color32(156, 220, 254, 255),
+			variables = new Color32(156, 220, 254, 255),
 			typeParameters = new Color32(184, 215, 163, 255),
-			enumMembers = new Color32(189, 99, 197, 255),
+			enumMembers = new Color32(220, 220, 220, 255),
 			
 			preprocessor = new Color32(155, 155, 155, 255),
-			defineSymbols = new Color32(189, 99, 197, 255),
+			defineSymbols = new Color32(220, 220, 220, 255),
 			inactiveCode = new Color32(155, 155, 155, 255),
 			comments = new Color32(87, 166, 74, 255),
 			xmlDocs = new Color32(87, 166, 74, 255),

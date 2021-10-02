@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -34,6 +34,7 @@ namespace ScriptInspector.Themes
 			hyperlinks				= TangoColors.butter2,
 			
 			keywords				= TangoColors.plum1,
+			controlKeywords			= TangoColors.plum1,
 			constants               = TangoColors.butter2,
 			strings					= TangoColors.butter2,
 			builtInLiterals			= TangoColors.orange3,

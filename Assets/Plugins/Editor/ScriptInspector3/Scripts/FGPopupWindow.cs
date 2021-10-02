@@ -1,6 +1,6 @@
 ﻿/* SCRIPT INSPECTOR 3
- * version 3.0.28, March 2021
- * Copyright © 2012-2020, Flipbook Games
+ * version 3.0.29, May 2021
+ * Copyright © 2012-2021, Flipbook Games
  * 
  * Unity's legendary editor for C#, UnityScript, Boo, Shaders, and text,
  * now transformed into an advanced C# IDE!!!
@@ -196,7 +196,9 @@ public class FGPopupWindow : EditorWindow
 		if (startsFlipped == flipped)
 		{
 			if (horizontal ? rc.x != fit.x : rc.y != fit.y)
-			{	flipped = !flipped;
+			{
+				//Debug.Log("rc = " + rc + "\tfit = " + fit);
+				flipped = !flipped;
 				if (flipped)
 				{
 					x = horizontal ? dropDownRect.x - width : fit.x;
