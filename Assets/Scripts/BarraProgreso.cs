@@ -35,7 +35,7 @@ public class BarraProgreso : MonoBehaviour
 	void ActualizarBarra(float ValorMax, float ValorAct)
 	{
 		float porcentaje;
-		int exp;
+		//int exp;
 		porcentaje = ValorAct / ValorMax;
 		Barra.value = porcentaje;
 		porcentaje =(Mathf.Round(porcentaje*100));
