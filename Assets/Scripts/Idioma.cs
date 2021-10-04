@@ -44,7 +44,6 @@ public class Idioma : MonoBehaviour
 		if(Text[0] != null){
 			Text[0].text = TextSpanish[0];
 		}
-	
-		}
+
 	}
 }
