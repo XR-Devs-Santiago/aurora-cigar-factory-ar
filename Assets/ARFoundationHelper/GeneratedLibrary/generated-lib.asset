@@ -12,26 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
   m_Name: generated-lib
   m_EditorClassIdentifier: 
-  m_GuidLow: 5515890285461346987
-  m_GuidHigh: 5389441311409686430
+  m_GuidLow: 5516649171294994809
+  m_GuidHigh: 1794665269937008297
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5540932640116427266
-      m_GuidHigh: 16010315947274114712
+      m_GuidLow: 4760793011549695744
+      m_GuidHigh: 3907223703372666775
+    m_SerializedTextureGuid:
+      m_GuidLow: 6855792234443424801
+      m_GuidHigh: 13499005490272397226
+    m_Size: {x: 1, y: 1}
+    m_SpecifySize: 1
+    m_Name: Experiencia3_Tracker
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5072664385000750286
+      m_GuidHigh: 10477566756557728422
     m_SerializedTextureGuid:
       m_GuidLow: 5356036915646144686
       m_GuidHigh: 7898953869954198121
-    m_Size: {x: 0.1, y: 0.1}
+    m_Size: {x: 1, y: 1}
     m_SpecifySize: 1
     m_Name: Experiencia2_Tracker
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 4789618046330279296
-      m_GuidHigh: 7522254221067916417
+      m_GuidLow: 4642511548522320595
+      m_GuidHigh: 11329607860760709
     m_SerializedTextureGuid:
       m_GuidLow: 17403312130109313143
       m_GuidHigh: 16327069066263993112
-    m_Size: {x: 0.1, y: 0.1}
+    m_Size: {x: 1, y: 1}
     m_SpecifySize: 1
     m_Name: Experiencia1_Tracker
     m_Texture: {fileID: 0}
