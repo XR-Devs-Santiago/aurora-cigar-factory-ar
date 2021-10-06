@@ -32,7 +32,9 @@ public class OnOffTracking : NYImageTrackerEventHandler
     public override void OnTrackingLost()
     {
 	    //targetAnim.Play(onLostAnimName);
+	    alerta_codigo_incorrecto.SetActive(false);
 	    panel_alerta.SetActive(true);
+	    alerta_escaneo.SetActive(true);
 	    modelo_experiencia.SetActive(false);
     }
     
