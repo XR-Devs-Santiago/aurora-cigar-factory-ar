@@ -17,34 +17,31 @@ public class Idioma : MonoBehaviour
 	{
 		if(CambiodeIdioma== 0){
 			IdiomaIngles();
-		}else if(CambiodeIdioma == 1){
+		} else if (CambiodeIdioma == 1) {
 			IdiomaSpanish();
 		}
 
 	}
 
 	public void Change(){
-		if(CambiodeIdioma == 0){
+		if (CambiodeIdioma == 0) {
 			CambiodeIdioma = 1;
-		}else if(CambiodeIdioma== 1){
+		} else if (CambiodeIdioma== 1) {
 			CambiodeIdioma = 0;
 		}
 
 	}
 
 	void IdiomaIngles(){
-		if(Text[0] != null){
+		if (Text[0] != null) {
 			Text[0].text = TextEnglish[0];
 		}
-	
-        
 	}
 
 	void IdiomaSpanish(){
-		if(Text[0] != null){
+		if(Text[0] != null)
+		{
 			Text[0].text = TextSpanish[0];
-		}
-	
 		}
 	}
 }
