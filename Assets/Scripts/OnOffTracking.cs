@@ -38,6 +38,18 @@ public class OnOffTracking : NYImageTrackerEventHandler
 	    modelo_experiencia.SetActive(false);
     }
     
+	// This function is called when the behaviour becomes disabled () or inactive.
+	protected void OnDisable()
+	{
+		modelo_experiencia.SetActive(false);
+	}
+	
+	// This function is called when the MonoBehaviour will be destroyed.
+	protected void OnDestroy()
+	{
+		modelo_experiencia.SetActive(false);
+	}
+    
 	public bool escaneo_correcto()
 	{
 		bool result = true;
