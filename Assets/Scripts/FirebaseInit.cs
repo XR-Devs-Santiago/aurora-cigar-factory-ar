@@ -102,7 +102,7 @@ public class FirebaseInit : MonoBehaviour
 		});
 	}
 	
-	public void facebookFirebaseSignIn() {
+	void facebookFirebaseSignIn() {
 		var accessToken = Facebook.Unity.AccessToken.CurrentAccessToken.TokenString;
 		
 		Firebase.Auth.Credential credential = Firebase.Auth.FacebookAuthProvider.GetCredential(accessToken);
