@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Guseppe.unity
     guid: f52e761e29c9ef64b98923ee15ccf3f5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 38f2ed4b66e66473ab006f30f7b42956
   m_configObjects:
