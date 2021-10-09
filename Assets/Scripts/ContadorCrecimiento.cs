@@ -11,8 +11,7 @@ public class ContadorCrecimiento : MonoBehaviour
 	public	int tiempoInicial;
 	
 	[Tooltip("Escala del tiempo del reloj")]
-	[Range(-12.0f,12.0f)]
-	public	float	EscalaDeTiempo = 1;
+	public	float	EscalaDeTiempo = 12;
 	
 	public	TMP_Text MyText;
 	private	float TiempoDelFrameConTimeScale = 0f;
