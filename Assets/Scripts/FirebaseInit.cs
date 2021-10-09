@@ -135,4 +135,8 @@ public class FirebaseInit : MonoBehaviour
 		PanelPrincipal.SetActive(true);
 		PanelLogin.SetActive(false);
 	}
+	
+	public void logout() {
+		auth.SignOut();
+	}
 }
