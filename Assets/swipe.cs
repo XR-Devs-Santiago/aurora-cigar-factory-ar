@@ -71,7 +71,7 @@ public class swipe : MonoBehaviour
                     if (j != i)
                     {
                         imageContent.transform.GetChild(j).GetComponent<Image>().color = colors[0];
-                        imageContent.transform.GetChild(j).localScale = Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
+	                    imageContent.transform.GetChild(j).localScale = Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                         transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                     }
                 }
