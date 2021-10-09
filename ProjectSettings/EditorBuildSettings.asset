@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Guseppe_Tracking.unity
     guid: 9270097f0d1855b448518e39b3f028ce
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 38f2ed4b66e66473ab006f30f7b42956
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: cfb58f64ba617428680f06aeb19a6b3d, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 7d16621fdc952416d87014abeb42c908, type: 2}
