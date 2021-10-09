@@ -53,7 +53,7 @@ public class OnOffTracking : NYImageTrackerEventHandler
 	public bool escaneo_correcto()
 	{
 		bool result = true;
-		if(modelo_experiencia.gameObject.name == "experiencia1_animada" && ValoresGlobales.experiencia_seleccionada !=	Experiencias.experiencia1_arado)
+		if(modelo_experiencia.gameObject.name == "Modelo_Experiencia1" && ValoresGlobales.experiencia_seleccionada !=	Experiencias.experiencia1_arado)
 		{
 			result = false;
 		}
