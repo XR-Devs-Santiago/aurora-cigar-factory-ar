@@ -13654,7 +13654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587418068}
   m_Layer: 5
-  m_Name: Experiencia2
+  m_Name: Experiencia2.old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17236,7 +17236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &767106159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17254,7 +17254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.00078034, y: 499.20996}
+  m_AnchoredPosition: {x: 0.00078034, y: 429}
   m_SizeDelta: {x: 571.68, y: 247.33997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &770229241
@@ -19124,6 +19124,7 @@ GameObject:
   - component: {fileID: 826090106}
   - component: {fileID: 826090108}
   - component: {fileID: 826090107}
+  - component: {fileID: 826090109}
   m_Layer: 5
   m_Name: Txt (1)
   m_TagString: Untagged
@@ -19247,6 +19248,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826090105}
   m_CullTransparentMesh: 1
+--- !u!114 &826090109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826090105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19ee3599a3cd894faf43eb1c7d10866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiempoInicial: 0
+  EscalaDeTiempo: 12
+  MyText: {fileID: 826090107}
+  Panel1: {fileID: 1685362109}
+  Panel2: {fileID: 546354016}
+  Panel3: {fileID: 701753086}
+  Panel4: {fileID: 1225414990}
+  AlertaCompletado: {fileID: 694453845}
 --- !u!1 &827156977
 GameObject:
   m_ObjectHideFlags: 0
@@ -31853,7 +31874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404824394}
   m_Layer: 5
-  m_Name: Experiencia3
+  m_Name: Experiencia2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71074,7 +71095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel_experiencias: {fileID: 213051906}
-  experiencia: {fileID: 587418067}
+  experiencia: {fileID: 1404824393}
   panel_alertas: {fileID: 1107084572}
 --- !u!95 &5144789546690585518
 Animator:
