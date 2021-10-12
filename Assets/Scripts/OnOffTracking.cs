@@ -61,7 +61,7 @@ public class OnOffTracking : NYImageTrackerEventHandler
 		{
 			result = false;
 		}
-		if(modelo_experiencia.gameObject.name == "esfera" && ValoresGlobales.experiencia_seleccionada !=	Experiencias.experiencia3_partes_planta)
+		if(modelo_experiencia.gameObject.name == "Modelo_Experiencia3" && ValoresGlobales.experiencia_seleccionada !=	Experiencias.experiencia3_partes_planta)
 		{
 			result = false;
 		}
