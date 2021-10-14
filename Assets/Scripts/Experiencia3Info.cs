@@ -14,12 +14,12 @@ public class Experiencia3Info : MonoBehaviour
 			{
 			   if(!info.active)
 	           {
-						      info.SetActive(true);
+				    info.SetActive(true);
 			   }
 			   else
 			   {
-						      info.SetActive(false);
-					   }
+					info.SetActive(false);
+			   }
 			}
 			else
 			{
