@@ -24,8 +24,10 @@ public class Idioma : MonoBehaviour
 
 	}
 
-	public void Change(){
-		if (CambiodeIdioma == 0) {
+	public void Change(int valor){
+		if (valor != null) {
+			CambiodeIdioma = valor;
+		} else if (CambiodeIdioma == 0) {
 			CambiodeIdioma = 1;
 		} else if (CambiodeIdioma== 1) {
 			CambiodeIdioma = 0;
@@ -33,7 +35,7 @@ public class Idioma : MonoBehaviour
 
 	}
 
-	void IdiomaSpanish(){
+	void IdiomaIngles(){
 		for(int i=0;i<=66;i++){
 			if (Text[i] != null) {
 				Text[i].text = TextEnglish[i];
@@ -41,7 +43,7 @@ public class Idioma : MonoBehaviour
 		}
 	}
 
-	void IdiomaIngles(){
+	void IdiomaSpanish(){
 		for(int i=0;i<=66;i++){
 			if(Text[i] != null)
 		{
