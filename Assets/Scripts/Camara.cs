@@ -24,8 +24,8 @@ public class Camara : MonoBehaviour
 	void Start()
 	{
 		NativeGallery.CheckPermission(NativeGallery.PermissionType.Write);
-		SetActivesObjetos(true);
-		EncenderUnPanel(panelEscaner);
+		NativeGallery.RequestPermission(NativeGallery.PermissionType.Write);
+
 	}
 	
 	void OnEnable(){
@@ -78,11 +78,13 @@ public class Camara : MonoBehaviour
 	}
 	
 	IEnumerator CaptureIt(){
+		
 		SetActivesObjetos(false);
 		string timeStamp = System.DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss");
-		string fileName = "MuralAR-"+timeStamp+".png";
+		string fileName = "MuralAR-" + timeStamp + ".png";
 		lastFileName = fileName;
 		ScreenCapture.CaptureScreenshot(fileName);
+
 		yield return new WaitForEndOfFrame();
 	}
 	
@@ -95,8 +97,8 @@ public class Camara : MonoBehaviour
 	
 	
 	public void Guardar(){
-		//NativeToolkit.SaveImage(lastImageTexture, "Almacenamiento interno/DCIM/Camera", ".png");
-		
+		NativeGallery.SaveImageToGallery();
+
 		File.WriteAllBytes( "/storage/emulated/0/Mural/tabaco.png",lastImageTexture.EncodeToPNG());
 	}
 	

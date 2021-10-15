@@ -54,7 +54,12 @@ public static class NativeGallery
 	public delegate void MediaPickCallback( string path );
 	public delegate void MediaPickMultipleCallback( string[] paths );
 
-	#region Platform Specific Elements
+    public static void SaveImageToGallery()
+    {
+        throw new NotImplementedException();
+    }
+
+    #region Platform Specific Elements
 #if !UNITY_EDITOR && UNITY_ANDROID
 	private static AndroidJavaClass m_ajc = null;
 	private static AndroidJavaClass AJC
@@ -128,7 +133,7 @@ public static class NativeGallery
 	private static extern string _NativeGallery_LoadImageAtPath( string path, string temporaryFilePath, int maxSize );
 #endif
 
-#if !UNITY_EDITOR && ( UNITY_ANDROID || UNITY_IOS )
+#if !UNITY_EDITOR && (UNITY_ANDROID || UNITY_IOS)
 	private static string m_temporaryImagePath = null;
 	private static string TemporaryImagePath
 	{
@@ -159,18 +164,18 @@ public static class NativeGallery
 		}
 	}
 #endif
-	#endregion
+    #endregion
 
-	#region Runtime Permissions
-	// PermissionFreeMode was initially planned to be a toggleable setting on iOS but it has its own issues when set to false, so its value is forced to true.
-	// These issues are:
-	// - Presented permission dialog will have a "Select Photos" option on iOS 14+ but clicking it will freeze and eventually crash the app (I'm guessing that
-	//   this is caused by how permissions are handled synchronously in NativeGallery)
-	// - While saving images/videos to Photos, iOS 14+ users would see the "Select Photos" option (which is irrelevant in this context, hence confusing) and
-	//   the user must grant full Photos access in order to save the image/video to a custom album
-	// The only downside of having PermissionFreeMode = true is that, on iOS 14+, images/videos will be saved to the default Photos album rather than the
-	// provided custom album
-	private const bool PermissionFreeMode = true;
+    #region Runtime Permissions
+    // PermissionFreeMode was initially planned to be a toggleable setting on iOS but it has its own issues when set to false, so its value is forced to true.
+    // These issues are:
+    // - Presented permission dialog will have a "Select Photos" option on iOS 14+ but clicking it will freeze and eventually crash the app (I'm guessing that
+    //   this is caused by how permissions are handled synchronously in NativeGallery)
+    // - While saving images/videos to Photos, iOS 14+ users would see the "Select Photos" option (which is irrelevant in this context, hence confusing) and
+    //   the user must grant full Photos access in order to save the image/video to a custom album
+    // The only downside of having PermissionFreeMode = true is that, on iOS 14+, images/videos will be saved to the default Photos album rather than the
+    // provided custom album
+    private const bool PermissionFreeMode = true;
 
 	public static Permission CheckPermission( PermissionType permissionType )
 	{
