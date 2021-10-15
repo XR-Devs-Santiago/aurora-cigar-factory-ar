@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Idioma : MonoBehaviour
 {
   
-	public int CambiodeIdioma = 1;
+	public int CambiodeIdioma = 0;
     
 	public string[] TextEnglish;
 	public string[] TextSpanish;
-	public Text[] Text;
+	public TMP_Text[] Text;
 
 	// Update is called once per frame
 	void Update()
@@ -33,15 +34,20 @@ public class Idioma : MonoBehaviour
 	}
 
 	void IdiomaIngles(){
-		if (Text[0] != null) {
-			Text[0].text = TextEnglish[0];
+		for(int i=0;i<=66;i++){
+			if (Text[i] != null) {
+				Text[i].text = TextEnglish[i];
+		}
 		}
 	}
 
 	void IdiomaSpanish(){
-		if(Text[0] != null)
+		for(int i=0;i<=66;i++){
+			if(Text[i] != null)
 		{
-			Text[0].text = TextSpanish[0];
+				Text[i].text = TextSpanish[i];
 		}
+		}
+		
 	}
 }
