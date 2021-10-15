@@ -8,7 +8,7 @@ public class OnOffTracking : NYImageTrackerEventHandler
 
     public string onFoundAnimName;
 	public string onLostAnimName;
-	public GameObject panel_alerta, modelo_experiencia, alerta_escaneo, alerta_codigo_incorrecto;
+	public GameObject panel_alerta, modelo_experiencia, alerta_escaneo, alerta_codigo_incorrecto, canvas_ui;
 
     public override void OnTrackingFound()
     {
@@ -25,6 +25,9 @@ public class OnOffTracking : NYImageTrackerEventHandler
 		    panel_alerta.SetActive(false);
 		    alerta_escaneo.SetActive(true);
 		    modelo_experiencia.SetActive(true);
+		    if(modelo_experiencia.gameObject.name == "Modelo_Experiencia3"){
+			    canvas_ui.SetActive(false);
+		    }
 	    }
 	    
     }
@@ -36,6 +39,9 @@ public class OnOffTracking : NYImageTrackerEventHandler
 	    panel_alerta.SetActive(true);
 	    alerta_escaneo.SetActive(true);
 	    modelo_experiencia.SetActive(false);
+	    if(modelo_experiencia.gameObject.name == "Modelo_Experiencia3"){
+		    canvas_ui.SetActive(true);
+	    }
     }
     
 	// This function is called when the behaviour becomes disabled () or inactive.
@@ -57,11 +63,11 @@ public class OnOffTracking : NYImageTrackerEventHandler
 		{
 			result = false;
 		}
-		if(modelo_experiencia.gameObject.name == "Cubo" && ValoresGlobales.experiencia_seleccionada !=	Experiencias.experiencia2_crecimiento)
+		if(modelo_experiencia.gameObject.name == "Modelo_Experiencia2" && ValoresGlobales.experiencia_seleccionada !=	Experiencias.experiencia2_crecimiento)
 		{
 			result = false;
 		}
-		if(modelo_experiencia.gameObject.name == "esfera" && ValoresGlobales.experiencia_seleccionada !=	Experiencias.experiencia3_partes_planta)
+		if(modelo_experiencia.gameObject.name == "Modelo_Experiencia3" && ValoresGlobales.experiencia_seleccionada !=	Experiencias.experiencia3_partes_planta)
 		{
 			result = false;
 		}
