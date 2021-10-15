@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1091,7 +1091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 81.92976, y: -32.094543}
+  m_AnchoredPosition: {x: 81.92975, y: -32.094482}
   m_SizeDelta: {x: 28.925232, y: 28.925232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &52802313
@@ -15140,7 +15140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -8.8491, y: 175.47894}
+  m_AnchoredPosition: {x: 0, y: 175.47894}
   m_SizeDelta: {x: 558.3876, y: 115.8396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604778330
@@ -17600,7 +17600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 147.47357, y: -32.094543}
+  m_AnchoredPosition: {x: 147.47357, y: -32.094482}
   m_SizeDelta: {x: 28.925232, y: 28.925232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &715421495
@@ -18329,7 +18329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.4746094, y: -8.098633}
+  m_AnchoredPosition: {x: -6.47464, y: -8.098694}
   m_SizeDelta: {x: 59.9591, y: 84.7529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755249040
@@ -20002,7 +20002,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 792707484}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 427628496}
+        m_TargetAssemblyTypeName: SeleccionIdioma, Assembly-CSharp
+        m_MethodName: SeleccionarIdiomaEspanol
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 771082961}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1070061887}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1724385825}
+        m_TargetAssemblyTypeName: Idioma, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &794592481
 GameObject:
   m_ObjectHideFlags: 0
@@ -22282,7 +22330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 114.70166, y: -32.094543}
+  m_AnchoredPosition: {x: 114.70166, y: -32.094482}
   m_SizeDelta: {x: 28.925232, y: 28.925232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867727301
@@ -22486,7 +22534,7 @@ RectTransform:
   m_Father: {fileID: 281237475}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.000000019606492, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.23128761, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -24076,7 +24124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180.24548, y: -32.094543}
+  m_AnchoredPosition: {x: 180.24548, y: -32.094482}
   m_SizeDelta: {x: 28.925232, y: 28.925232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &937178559
@@ -26845,6 +26893,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1724385825}
+        m_TargetAssemblyTypeName: Idioma, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -30679,7 +30739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 16.385925, y: -32.094543}
+  m_AnchoredPosition: {x: 16.385986, y: -32.094482}
   m_SizeDelta: {x: 28.925232, y: 28.925232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1204355892
@@ -36148,7 +36208,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.4748535, y: -369}
+  m_AnchoredPosition: {x: 0, y: -369}
   m_SizeDelta: {x: 805, y: 142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499550362
@@ -41400,7 +41460,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 869298919}
   m_HandleRect: {fileID: 869298918}
   m_Direction: 0
-  m_Value: 0.000000025505628
+  m_Value: -0.000000008501876
   m_Size: 0.23128761
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -42121,6 +42181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1724385824}
   - component: {fileID: 1724385823}
+  - component: {fileID: 1724385825}
   m_Layer: 0
   m_Name: AuthManager
   m_TagString: Untagged
@@ -42156,6 +42217,258 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1724385825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724385822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e874aee48f04b74bbc8aa84b7ae7501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CambiodeIdioma: 1
+  TextEnglish:
+  - ENGLISH
+  - SPANISH
+  - 'Log in to your social media account to continue to the experience:'
+  - Continue with Google
+  - Continue with Facebook
+  - Privacy Policy
+  - Privacy Policy
+  - 'All information provided by you from the time of registration to the end of
+    your purchase will be handled in strict confidence and will be kept private. 
+    Your approval will be required before any information provided is made public.
+    We are not responsible for mistakes made by our customers while using the services
+    we offer at laauroracigarworld.com, and we will not cover losses caused by: capturing
+    errors or misuse of the service, negligent handling, leaving the computer unattended
+    in the middle of an online session, or other security flaws that are the responsibility
+    of the user, etc.'
+  - I Agree!
+  - Cancel
+  - Continue without account
+  - EXPERIENCES
+  - Tour each station in the showroom and complete the tour!
+  - Land plow
+  - of 7 complete experiences
+  - Tobacco growth
+  - Parts of the tobacco plant
+  - Tobacco cure
+  - 'Before and after: transporting tobacco'
+  - Fermentation process
+  - Pressing process
+  - Showroom completed!
+  - Thanks for being part of the tour.
+  - End tour
+  - Tour complete!
+  - Thank you for being part of the Aurora Cigar World Experience showroom.  Tell
+    us how was your experience
+  - Rate your experience
+  - Continue
+  - Share with us
+  - Rate your experience
+  - What did you think of the showroom?
+  - Would you repeat the experience?
+  - Would you recommend coming to your family and friends?
+  - Rate us on TripAdvisor
+  - Continue
+  - Yes
+  - No
+  - Yes
+  - No
+  - Beta 1.0 La Aurora | Copyright (c) 2021
+  - Settings
+  - Rate app
+  - Privacy and terms
+  - Aurora Cigar World Factory
+  - Log out
+  - Language
+  - Spanish
+  - English
+  - Legal
+  - Privacy Policy
+  - Terms of use
+  - Curiosity
+  - La Aurora sows Dominican layer leaf in Sabana de Puerto, at the direction of
+    its current president and to recover the old project from 1961.
+  - For its 110th anniversary, La Aurora diversifies its products and launches La
+    Aurora rum, a super-premium rum.
+  - Juan preparing the land ...
+  - Ligero
+  - Seco
+  - Viso
+  - Volado
+  - It is the leaf with the best flavor and provides a spicy touch for this reason,
+    the best quality cigars are made with this leaf.
+  - It is the most popular tobacco filler in cigars.
+  - It is a leaf that has more oils and strength than the dry and flown because it
+    is higher and receives more nutrients.
+  - Past
+  - In the past, append information append information append information append
+    information. In the past, append information append information append information
+    append information.
+  - It ranks second in boldness and therefore these leaves have very little to offer
+    in terms of flavors and aromas.
+  - Present
+  - In the past, append information append information append information append
+    information. In the past, append information append information append information
+    append information.
+  TextSpanish:
+  - INGLES
+  - "ESPA\xD1OL"
+  - "Inicia sesi\xF3n en tu cuenta de redes sociales para continuar a la experiencia:"
+  - 'Continuar con Google '
+  - Continuar con Facebook
+  - Politica de privacidad
+  - "Pol\xEDtica de privacidad"
+  - "Toda la informaci\xF3n proporcionada por usted desde el momento del registro
+    hasta el final de su compra ser\xE1 manejada en estricta confidencialidad y se
+    mantendr\xE1 privada.  Se requerir\xE1 su aprobaci\xF3n antes de hacer p\xFAblica
+    cualquier informaci\xF3n proporcionada. No nos hacemos responsables de los errores
+    que cometan nuestros clientes durante el uso de los servicios que ofrecemos en
+    laauroracigarworld.com, y no cubriremos las p\xE9rdidas ocasionadas por: errores
+    de captura o mal uso del servicio, manejo negligente, dejar la computadora desatendida
+    en medio de una sesi\xF3n en l\xEDnea, u otras fallas de seguridad que sean responsabilidad
+    del usuario, etc"
+  - Estoy de acuerdo!
+  - Cancelar
+  - Continuar sin cuenta
+  - EXPERIENCIAS
+  - "Recorre cada estaci\xF3n del showroom y completa el recorrido!"
+  - Arado de la tierra
+  - de 7 experiencias completas
+  - Crecimiento del tabaco
+  - Partes de la planta de tabaco
+  - "Curaci\xF3n del tabaco"
+  - "Antes y despu\xE9s: transporte del tabaco"
+  - Proceso de fermentado
+  - Proceso de prensado
+  - Showroom completado!
+  - Gracias por ser parte del tour.
+  - Finalizar recorrido
+  - Tour completado!
+  - "Gracias por formar parte del showroom de la Aurora Cigar World Experience. 
+    Cu\xE9ntanos c\xF3mo fue tu experiencia"
+  - Califica tu experiencia
+  - Continuar
+  - Comparte con nosotros
+  - Califica tu experiencia
+  - "\xBFQu\xE9 le pareci\xF3 el showroom?"
+  - "\xBFVolver\xEDa a repetir la experiencia?"
+  - "\xBFRecomendar\xEDa venir a sus familiares y amigos?"
+  - Calificanos en TripAdvisor
+  - Continuar
+  - Si
+  - No
+  - Si
+  - No
+  - "Versi\xF3n Beta 1.0 La Aurora | Copyright (c) 2021"
+  - Ajustes
+  - Valora la app
+  - Privacidad y terminos
+  - Aurora Cigar World Factory
+  - Cerrar sesion
+  - Idioma
+  - "Espa\xF1ol"
+  - Ingles
+  - Legal
+  - "Pol\xEDtica de privacidad"
+  - "T\xE9rminos de uso"
+  - Sabias que...
+  - "La Aurora siembra hoja de capa dominicana en Sabana de Puerto, a direcci\xF3n
+    de su actual presidente y recuperar el antiguo proyecto de 1961. "
+  - Para su 110 aniversario, La Aurora diversifica sus productos y lanza el ron La
+    Aurora un ron superpremium.
+  - Juan preparando la tierra...
+  - Ligero
+  - Seco
+  - Viso
+  - 'Volado '
+  - 'Es la hoja de mejor sabor y aporta un toque picante por ello, los cigarros de
+    mejor calidad se hacen con esta hoja. '
+  - "Constituye el  relleno de tabaco m\xE1s popular en los cigarros."
+  - "Es una hoja que tiene m\xE1s aceites y fortaleza que el seco y volado por estar
+    m\xE1s arriba y recibir m\xE1s nutrientes."
+  - Ocupa el segundo lugar en audacia y, por tanto, estas hojas tienen muy poco que
+    ofrecer en cuanto a sabores y aromas.
+  - Antes
+  - "En el pasado, anexar informaci\xF3n anexar informaci\xF3n anexar informaci\xF3n
+    anexar informaci\xF3n. En el pasado, anexar informaci\xF3n anexar informaci\xF3n
+    anexar informaci\xF3n anexar informaci\xF3n. "
+  - Actualidad
+  - "En el pasado, anexar informaci\xF3n anexar informaci\xF3n anexar informaci\xF3n
+    anexar informaci\xF3n. En el pasado, anexar informaci\xF3n anexar informaci\xF3n
+    anexar informaci\xF3n anexar informaci\xF3n. "
+  Text:
+  - {fileID: 792707484}
+  - {fileID: 1020757172}
+  - {fileID: 1923450274}
+  - {fileID: 661540367}
+  - {fileID: 1949204253}
+  - {fileID: 655107490}
+  - {fileID: 104624948}
+  - {fileID: 1524917610}
+  - {fileID: 1800643505}
+  - {fileID: 1173274139}
+  - {fileID: 610345415}
+  - {fileID: 1376868325}
+  - {fileID: 1632304436}
+  - {fileID: 1155601747}
+  - {fileID: 1100189897}
+  - {fileID: 1526786677}
+  - {fileID: 872297700}
+  - {fileID: 653531939}
+  - {fileID: 1885298225}
+  - {fileID: 87443473}
+  - {fileID: 1016787521}
+  - {fileID: 131700309}
+  - {fileID: 857521834}
+  - {fileID: 37812330}
+  - {fileID: 179074103}
+  - {fileID: 87422598}
+  - {fileID: 1577990846}
+  - {fileID: 1593229507}
+  - {fileID: 1274693603}
+  - {fileID: 1252548636}
+  - {fileID: 1457963948}
+  - {fileID: 325637675}
+  - {fileID: 1165674427}
+  - {fileID: 1885048973}
+  - {fileID: 385917970}
+  - {fileID: 1603548099}
+  - {fileID: 500961836}
+  - {fileID: 1290358011}
+  - {fileID: 1880187298}
+  - {fileID: 1961039130}
+  - {fileID: 339763210}
+  - {fileID: 1535748734}
+  - {fileID: 943116077}
+  - {fileID: 192131045}
+  - {fileID: 1019182245}
+  - {fileID: 1755719023}
+  - {fileID: 1958536504}
+  - {fileID: 1005817971}
+  - {fileID: 2087232587}
+  - {fileID: 1999705339}
+  - {fileID: 234904666}
+  - {fileID: 2035647426}
+  - {fileID: 660024795}
+  - {fileID: 243120650}
+  - {fileID: 1914336803}
+  - {fileID: 1264045836}
+  - {fileID: 805059953}
+  - {fileID: 1289443742}
+  - {fileID: 1224421630}
+  - {fileID: 817542150}
+  - {fileID: 1172873019}
+  - {fileID: 116768989}
+  - {fileID: 1925011580}
+  - {fileID: 300765501}
+  - {fileID: 1094593346}
+  - {fileID: 414561570}
+  - {fileID: 44251177}
 --- !u!1 &1735789308
 GameObject:
   m_ObjectHideFlags: 0
@@ -42658,7 +42971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.157856, y: -32.094543}
+  m_AnchoredPosition: {x: 49.157837, y: -32.094482}
   m_SizeDelta: {x: 28.925232, y: 28.925232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752152477
@@ -46727,7 +47040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888, y: 44}
+  m_AnchoredPosition: {x: 0, y: 44}
   m_SizeDelta: {x: 852.26, y: 168.3045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1923450274
@@ -49801,7 +50114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.828, y: -533.5266}
+  m_AnchoredPosition: {x: 0, y: -533.5266}
   m_SizeDelta: {x: 568.34, y: 115.118}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2080455669
@@ -50498,7 +50811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.4748535, y: -197.87949}
+  m_AnchoredPosition: {x: 0, y: -197.87949}
   m_SizeDelta: {x: 805, y: 142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119552787
@@ -50630,7 +50943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 213.0174, y: -32.094543}
+  m_AnchoredPosition: {x: 213.0174, y: -32.094482}
   m_SizeDelta: {x: 28.925232, y: 28.925232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2139375750
