@@ -14949,7 +14949,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 175.47894}
-  m_SizeDelta: {x: 558.3876, y: 115.8396}
+  m_SizeDelta: {x: 1018.2, y: 115.8396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604778330
 MonoBehaviour:
@@ -15239,8 +15239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 13.828003, y: -2.4733887}
-  m_SizeDelta: {x: -142.4267, y: -32.167725}
+  m_AnchoredPosition: {x: -28.999985, y: -2.4733887}
+  m_SizeDelta: {x: -57.99997, y: -32.167725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610345415
 MonoBehaviour:
@@ -15291,7 +15291,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.25
+  m_fontSize: 48
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16098,7 +16098,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00048828125, y: 0.00036621094}
+  m_AnchoredPosition: {x: 0, y: 0.00036621094}
   m_SizeDelta: {x: 436.5922, y: 62.6949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &655107490
@@ -16155,7 +16155,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 42
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -33173,7 +33173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1340621518
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42240,6 +42240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CambiodeIdioma: 1
+  panelLenguaje: {fileID: 1070061887}
+  panelLogin: {fileID: 771082961}
   TextEnglish:
   - ENGLISH
   - SPANISH
@@ -47185,7 +47187,7 @@ MonoBehaviour:
   m_fontSizeMax: 42
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -50275,7 +50277,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -533.5266}
-  m_SizeDelta: {x: 568.34, y: 115.118}
+  m_SizeDelta: {x: 1018.2, y: 115.118}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2080455669
 MonoBehaviour:

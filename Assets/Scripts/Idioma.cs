@@ -7,8 +7,9 @@ using TMPro;
 public class Idioma : MonoBehaviour
 {
   
-	public int CambiodeIdioma = 0;
-    
+	public int CambiodeIdioma ;
+    public GameObject panelLenguaje;
+	public GameObject panelLogin;
 	public string[] TextEnglish;
 	public string[] TextSpanish;
 	public TMP_Text[] Text;
@@ -18,15 +19,23 @@ public class Idioma : MonoBehaviour
 	// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
 	void Start()
 	{
-		CambiodeIdioma = 0;
+		// 999 es el defaultValue que quiere decir que el valor no fue encontrado
+		var idioma = PlayerPrefs.GetInt("idioma", 999);
+
+		if (idioma != 999) {
+			CambiodeIdioma = idioma;
+			panelLenguaje.SetActive(false);
+			panelLogin.SetActive(true);
+		} else { 
+			CambiodeIdioma = 0;
+		}
+
 		englishButton.onClick.AddListener(enOnClick);
 		spanishButton.onClick.AddListener(esOnClick);
 		enUnchecked = englishButton.transform.Find("Unchecked").gameObject;
 		enChecked = englishButton.transform.Find("Checked").gameObject;
 		esUnchecked = spanishButton.transform.Find("Unchecked").gameObject;
 		esChecked = spanishButton.transform.Find("Checked").gameObject;
-
-		initLanguageToggles(CambiodeIdioma);
 	}
 
 	// Update is called once per frame
@@ -37,9 +46,14 @@ public class Idioma : MonoBehaviour
 		} else if (CambiodeIdioma == 1) {
 			IdiomaSpanish();
 		}
+
+		initLanguageToggles(CambiodeIdioma);
 	}
 
 	public void Change(int valor){
+		// Guardando valor seleccionado de idioma en preferencias de jugador.
+		PlayerPrefs.SetInt("idioma", valor);
+
 		if (valor != null) {
 			CambiodeIdioma = valor;
 		} else if (CambiodeIdioma == 0) {
