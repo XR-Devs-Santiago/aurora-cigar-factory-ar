@@ -15689,7 +15689,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 632579531}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1724385826}
+        m_TargetAssemblyTypeName: EnlacesDeMenu, Assembly-CSharp
+        m_MethodName: AbrirURL
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &632579531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36984,7 +36996,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1528545369}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1724385826}
+        m_TargetAssemblyTypeName: EnlacesDeMenu, Assembly-CSharp
+        m_MethodName: AbrirURL
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1528545369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42281,6 +42305,7 @@ GameObject:
   - component: {fileID: 1724385824}
   - component: {fileID: 1724385823}
   - component: {fileID: 1724385825}
+  - component: {fileID: 1724385826}
   m_Layer: 0
   m_Name: AuthManager
   m_TagString: Untagged
@@ -42572,6 +42597,18 @@ MonoBehaviour:
   - {fileID: 44251177}
   englishButton: {fileID: 1657147089}
   spanishButton: {fileID: 786503351}
+--- !u!114 &1724385826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724385822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93682f778447c4c589eda905372c98e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1735789308
 GameObject:
   m_ObjectHideFlags: 0
@@ -50148,7 +50185,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2076155093}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1724385826}
+        m_TargetAssemblyTypeName: EnlacesDeMenu, Assembly-CSharp
+        m_MethodName: AbrirURL
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2076155093
 MonoBehaviour:
   m_ObjectHideFlags: 0
