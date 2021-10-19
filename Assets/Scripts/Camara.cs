@@ -48,9 +48,8 @@ public class Camara : MonoBehaviour
 		SetActivesObjetos(false);
 		StartCoroutine("CaptureIt");
 	}
-	
+
 	IEnumerator CaptureIt(){
-		
 		
 		yield return new WaitForEndOfFrame();
 		Texture2D ss = new Texture2D( Screen.width, Screen.height, TextureFormat.RGB24, false );
@@ -65,6 +64,12 @@ public class Camara : MonoBehaviour
 
 		SetActivesObjetos(true);
 		
+		
+		new NativeShare().AddFile( filePath )
+			.SetSubject( "MuralAR" ).SetText( "Mural Photo" )
+			.SetCallback( ( result, shareTarget ) => Debug.Log( "Share result: " + result + ", selected app: " + shareTarget ) )
+			.Share();
+		
 	}
 	
 	public void Descartar(){
@@ -76,13 +81,4 @@ public class Camara : MonoBehaviour
 		NativeGallery.SaveImageToGallery();
 
 	}
-	
-	public void Compartir(){
-		
-		new NativeShare().AddFile( filePath )
-			.SetSubject( "MuralAR" ).SetText( "Mural Photo" )
-			.SetCallback( ( result, shareTarget ) => Debug.Log( "Share result: " + result + ", selected app: " + shareTarget ) )
-			.Share();
-	}
-	
 }

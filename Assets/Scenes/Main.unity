@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5242,11 +5242,11 @@ RectTransform:
   - {fileID: 26579458}
   - {fileID: 1677783770}
   - {fileID: 1629042612}
-  - {fileID: 508779836}
-  - {fileID: 248612992}
   - {fileID: 977134862}
   - {fileID: 404647068}
   - {fileID: 972361199}
+  - {fileID: 248612992}
+  - {fileID: 508779836}
   - {fileID: 782982654}
   - {fileID: 587418068}
   - {fileID: 1404824394}
@@ -6188,7 +6188,7 @@ RectTransform:
   - {fileID: 1490613509}
   - {fileID: 378155098}
   m_Father: {fileID: 213051907}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10155,7 +10155,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 213051907}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -12199,7 +12199,7 @@ RectTransform:
   m_Children:
   - {fileID: 277164279}
   m_Father: {fileID: 213051907}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24796,7 +24796,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 213051907}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -24928,7 +24928,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 213051907}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -27014,7 +27014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1070061888
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42334,14 +42334,12 @@ MonoBehaviour:
   ObjetosAOcultar:
   - {fileID: 26579457}
   - {fileID: 977134861}
-  - {fileID: 972361198}
   - {fileID: 1542965643}
   - {fileID: 939251937}
   - {fileID: 1705790755}
   ocultarObjCamara:
   - {fileID: 26579457}
   - {fileID: 977134861}
-  - {fileID: 972361198}
 --- !u!1 &1735789308
 GameObject:
   m_ObjectHideFlags: 0
