@@ -12,7 +12,7 @@ public class Experiencia3Info : MonoBehaviour
 		{
 			if(info.name == info_destino)
 			{
-			   if(!info.active)
+			   if(!info.activeSelf)
 	           {
 				    info.SetActive(true);
 			   }
