@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
@@ -143,5 +143,24 @@ public class NYImageTrackerManager : MonoBehaviour
 
         debugText.text = debugMessage;
     }
+    
+	void Disable_Manager(){
+		this._foundationTrackerManager.enabled = false;
+	}
+	void Enable_Manager(){
+		if(this._foundationTrackerManager != null){
+			this._foundationTrackerManager.enabled = true;
+		}
+	}
+	// This function is called when the object becomes enabled and active.
+	protected void OnEnable()
+	{
+		Enable_Manager();
+	}
+	// This function is called when the behaviour becomes disabled () or inactive.
+	protected void OnDisable()
+	{
+		Disable_Manager();
+	}
 
 }
