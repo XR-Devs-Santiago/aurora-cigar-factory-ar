@@ -26,7 +26,7 @@ public class OnOffTracking : NYImageTrackerEventHandler
 		    alerta_escaneo.SetActive(true);
 		    modelo_experiencia.SetActive(true);
 		    if(modelo_experiencia.gameObject.name == "Modelo_Experiencia3"){
-			    canvas_ui.SetActive(false);
+			    canvas_ui.SetActive(true);
 		    }
 	    }
 	    
@@ -40,7 +40,7 @@ public class OnOffTracking : NYImageTrackerEventHandler
 	    alerta_escaneo.SetActive(true);
 	    modelo_experiencia.SetActive(false);
 	    if(modelo_experiencia.gameObject.name == "Modelo_Experiencia3"){
-		    canvas_ui.SetActive(true);
+		    canvas_ui.SetActive(false);
 	    }
     }
     
