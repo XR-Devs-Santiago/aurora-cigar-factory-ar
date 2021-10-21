@@ -22,6 +22,10 @@ public class trackAnimaciones : MonoBehaviour
 	public Button experiencia5;
 	public Button experiencia6;
 	public Button experiencia7;
+	public Button menu;
+	public Button cerrarMenu;
+	public Button cerrarSesion;
+	public Button atrasLogin;
 	
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,7 @@ public class trackAnimaciones : MonoBehaviour
 	    
 		esp2.onClick.AddListener(espanol);
 		eng2.onClick.AddListener(espanol);
+		atrasLogin.onClick.AddListener(encenderAnimacionLenguaje);
 		
 		//Animaciones panel principal
 		googleBTN.onClick.AddListener(encenderAnimacionLogin);
@@ -47,6 +52,12 @@ public class trackAnimaciones : MonoBehaviour
 		experiencia6.onClick.AddListener(encenderAnimacionAlert);
 		experiencia7.onClick.AddListener(encenderAnimacionAlert);
 	    
+		//Animacion menu principal
+		menu.onClick.AddListener(encenderAnimacionMenu);
+		cerrarMenu.onClick.AddListener(apagarAnimacionMenu);
+		cerrarSesion.onClick.AddListener(encenderAnimacionLenguaje);
+		
+		
     }
     
     
@@ -61,9 +72,16 @@ public class trackAnimaciones : MonoBehaviour
 	void encenderAnimacionAlert(){
 		anim.Play("alert escanear codigo");
 	}
-    // Update is called once per frame
-    void Update()
-    {
-	   
-    }
+	
+	void encenderAnimacionMenu(){
+		anim.Play("menu");
+	}
+	
+	void apagarAnimacionMenu(){
+		anim.Play("menuCerrado");
+	}
+	
+	void encenderAnimacionLenguaje(){
+		anim.Play("lenguaje anim");
+	}
 }
