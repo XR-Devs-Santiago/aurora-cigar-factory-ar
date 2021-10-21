@@ -16688,7 +16688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.4746094, y: -8.098938}
+  m_AnchoredPosition: {x: -6.4746094, y: -8.098877}
   m_SizeDelta: {x: 59.9591, y: 84.7529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755249040
@@ -19928,7 +19928,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1402885041}
         m_TargetAssemblyTypeName: ValoresGlobales, Assembly-CSharp
         m_MethodName: SetExperiencia
         m_Mode: 3
@@ -31776,7 +31776,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1402885041}
         m_TargetAssemblyTypeName: ValoresGlobales, Assembly-CSharp
         m_MethodName: SetExperiencia
         m_Mode: 3
@@ -33958,7 +33958,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1402885041}
         m_TargetAssemblyTypeName: ValoresGlobales, Assembly-CSharp
         m_MethodName: SetExperiencia
         m_Mode: 3
