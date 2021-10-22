@@ -64,7 +64,7 @@ public class Idioma : MonoBehaviour
 	}
 
 	void IdiomaIngles(){
-		for(int i=0;i<=66;i++){
+		for(int i=0;i<=78;i++){
 			if (Text[i] != null) {
 				Text[i].text = TextEnglish[i];
 			}
@@ -72,7 +72,7 @@ public class Idioma : MonoBehaviour
 	}
 
 	void IdiomaSpanish(){
-		for(int i=0;i<=66;i++){
+		for(int i=0;i<=78;i++){
 			if(Text[i] != null)
 			{
 				Text[i].text = TextSpanish[i];
