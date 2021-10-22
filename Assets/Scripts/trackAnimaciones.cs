@@ -26,6 +26,8 @@ public class trackAnimaciones : MonoBehaviour
 	public Button cerrarMenu;
 	public Button cerrarSesion;
 	public Button atrasLogin;
+	public Button abrirAjustes;
+	public Button atrasAjustes;
 	
     // Start is called before the first frame update
     void Start()
@@ -56,7 +58,8 @@ public class trackAnimaciones : MonoBehaviour
 		menu.onClick.AddListener(encenderAnimacionMenu);
 		cerrarMenu.onClick.AddListener(apagarAnimacionMenu);
 		cerrarSesion.onClick.AddListener(encenderAnimacionLenguaje);
-		
+		abrirAjustes.onClick.AddListener(encenderAjustes);
+		atrasAjustes.onClick.AddListener(apagarAjustes);
 		
     }
     
@@ -79,6 +82,14 @@ public class trackAnimaciones : MonoBehaviour
 	
 	void apagarAnimacionMenu(){
 		anim.Play("menuCerrado");
+	}
+	
+	void encenderAjustes(){
+		anim.Play("abrirAjustes");
+	}
+	
+	void apagarAjustes(){
+		anim.Play("cerrarAjustes");
 	}
 	
 	void encenderAnimacionLenguaje(){
