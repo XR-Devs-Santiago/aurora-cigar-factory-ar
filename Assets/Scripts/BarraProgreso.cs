@@ -9,7 +9,7 @@ public class BarraProgreso : MonoBehaviour
 	Slider Barra;
 	public float max, act;
 	public TMP_Text ValorBarraProgreso, NumEstaciones;
-	public	bool[] advarr =new bool[7];
+	public	bool[] advarr = new bool[7];
 	private Color ColorBarra = Color.green;
 	public int estacionSeleccionada;
 	
@@ -20,7 +20,7 @@ public class BarraProgreso : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		for(int a=0;a<8;a++){
+		for(int a = 0;a < advarr.Length; a++){
 			advarr[a] = false;
 		}
 	}

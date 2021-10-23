@@ -7,7 +7,7 @@ using TMPro;
 public class Idioma : MonoBehaviour
 {
   
-	public int CambiodeIdioma ;
+	public int CambiodeIdioma;
     public GameObject panelLenguaje;
 	public GameObject panelLogin;
 	public string[] TextEnglish;
@@ -64,7 +64,7 @@ public class Idioma : MonoBehaviour
 	}
 
 	void IdiomaIngles(){
-		for(int i=0;i<=66;i++){
+		for(int i = 0; i < TextEnglish.Length; i++){
 			if (Text[i] != null) {
 				Text[i].text = TextEnglish[i];
 			}
@@ -72,7 +72,7 @@ public class Idioma : MonoBehaviour
 	}
 
 	void IdiomaSpanish(){
-		for(int i=0;i<=66;i++){
+		for(int i = 0;i < TextSpanish.Length; i++){
 			if(Text[i] != null)
 			{
 				Text[i].text = TextSpanish[i];
@@ -82,7 +82,6 @@ public class Idioma : MonoBehaviour
 
     void initLanguageToggles(int value)
     {
-        Debug.Log(value);
         if (value == 0)
         {
 			enChecked.SetActive(true);
