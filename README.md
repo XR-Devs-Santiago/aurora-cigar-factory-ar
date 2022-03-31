@@ -1,3 +1,3 @@
 # aurora-cigar-factory-ar
 
-Aurora Cigar Factory showroom AR App
+Aurora Cigar Factory AR showroom App
